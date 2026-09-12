@@ -85,27 +85,20 @@ h2{font-weight:500;font-size:clamp(20px,2.6vw,28px);letter-spacing:.08em;margin:
 @media (max-width:900px){.kw{grid-template-columns:repeat(2,1fr)} .kw > div:nth-child(2){border-right:0} .kw > div:nth-child(-n+2){border-bottom:1px solid var(--line)}}
 @media (max-width:480px){.kw{grid-template-columns:1fr} .kw > div{border-right:0;border-bottom:1px solid var(--line)} .kw > div:last-child{border-bottom:0}}
 
-.chars{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:22px 28px}
-.ch{padding:18px 0 0;border-top:1px solid var(--line);display:grid;grid-template-columns:76px 1fr;gap:16px;align-items:start}
-.ch-face{width:76px;height:76px;border-radius:50%;object-fit:cover;display:block;box-shadow:0 0 0 1px var(--line)}
-.ch-family{margin:0 0 4px;font-size:11.5px;letter-spacing:.06em;color:var(--muted);display:flex;align-items:center;gap:7px}
-.dot{width:9px;height:9px;border-radius:50%;background:var(--c);box-shadow:0 0 0 1px var(--line),0 0 8px var(--c);flex:none}
-.ch-name{margin:0 0 8px;font-size:19px;font-weight:500;letter-spacing:.1em;line-height:1.3}
-.ch-kana{display:block;font-size:11px;font-weight:400;letter-spacing:.14em;color:var(--muted);margin-top:2px}
-.ch-desc{margin:0;font-size:13px;color:var(--ink-2);line-height:1.8;max-width:30em}
-.is-hero{grid-column:1 / -1;grid-template-columns:120px 1fr;gap:24px;padding:22px 26px;background:var(--ground-2);border:1px solid var(--line);border-top:1px solid var(--line);border-radius:2px}
-.is-hero .ch-face{width:120px;height:120px;box-shadow:0 0 0 1px var(--line),0 0 18px var(--glow)}
-.is-hero .ch-name{font-size:24px}
-.is-hero .ch-desc{max-width:none}
-.is-hero .dot{background:#fff;box-shadow:0 0 0 1px var(--line),0 0 12px var(--glow)}
+.chars{list-style:none;margin:24px 0 0;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.ch{display:grid;grid-template-columns:72px 1fr;grid-template-rows:auto auto auto;column-gap:16px;row-gap:4px;align-items:start;padding:18px;border:1px solid var(--line);border-radius:2px;background:var(--ground-2)}
+.ch-face{grid-row:1 / span 3;width:72px;height:72px;border-radius:50%;object-fit:cover;display:block;box-shadow:0 0 0 1px var(--line)}
+.ch-name{margin:0;font-size:18px;font-weight:500;letter-spacing:.08em;line-height:1.3}
+.ch-kana{display:block;font-size:10.5px;font-weight:400;letter-spacing:.14em;color:var(--muted);margin-top:2px}
+.ch-meta{margin:0;font-size:11.5px;letter-spacing:.06em;color:var(--ink-2);display:flex;align-items:center;gap:7px;flex-wrap:wrap}
+.ch-sep{color:var(--muted)}
+.dot{width:8px;height:8px;border-radius:50%;background:var(--c);box-shadow:0 0 0 1px var(--line),0 0 8px var(--c);flex:none}
+.ch-desc{margin:2px 0 0;font-size:12.5px;color:var(--ink-2);line-height:1.75}
+.is-hero{border-color:var(--ink);box-shadow:0 0 0 1px var(--line),0 0 28px var(--glow)}
+.is-hero .ch-face{box-shadow:0 0 0 1px var(--line),0 0 16px var(--glow)}
+.is-hero .dot{background:#fff;box-shadow:0 0 0 1px var(--line),0 0 10px var(--glow)}
 @media (max-width:900px){.chars{grid-template-columns:repeat(2,1fr)}}
-@media (max-width:560px){.chars{grid-template-columns:1fr} .is-hero{grid-template-columns:76px 1fr;gap:16px} .is-hero .ch-face{width:76px;height:76px}}
-
-.scene-heading{display:flex;justify-content:space-between;gap:24px;align-items:end;padding-bottom:22px;border-bottom:1px solid var(--line)}
-.scene-heading h2{margin:0;font-family:"Shippori Mincho",serif;font-size:28px;font-weight:400;letter-spacing:.12em}
-.scene-heading p{margin:10px 0 0;color:var(--ink-2);font-size:13px;letter-spacing:.06em}
-.scene-count{white-space:nowrap;font-family:"Jost",sans-serif!important;font-size:12px!important;letter-spacing:.16em!important;color:var(--muted)!important}
-.scene-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;align-items:start;margin-top:24px}
+@media (max-width:560px){.chars{grid-template-columns:1fr;gap:12px}}
 .scene{margin:0;background:#120a0a;border-radius:2px;overflow:hidden}
 .scene img{display:block;width:100%;height:auto}
 .scene figcaption{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 18px;padding:14px 18px;background:var(--ground-2);border:1px solid var(--line);border-top:0;font-size:13px;color:var(--ink-2)}
@@ -152,11 +145,7 @@ img{max-width:100%;height:auto}
   .thesis{padding:20px 18px}
   .thesis p{font-size:17px}
   .kw h3{font-size:19px}
-  .ch{grid-template-columns:64px 1fr;gap:12px}
-  .ch-face{width:64px;height:64px}
-  .is-hero{padding:16px 16px;grid-template-columns:72px 1fr}
-  .is-hero .ch-face{width:72px;height:72px}
-  .is-hero .ch-name{font-size:20px}
+  .ch{padding:14px}
   .scene figcaption{padding:12px 14px;font-size:12px}
   .scene-heading h2{font-size:22px}
   .eps li{padding:12px 0}
@@ -228,78 +217,67 @@ img{max-width:100%;height:auto}
 <section id="characters">
   <div class="wrap">
     <p class="eyebrow">Characters</p>
+    <div class="scene-heading">
+      <div>
+        <h2>八つの家の子と、家のない子</h2>
+        <p>手の甲に咲いた紋の形が、その子の家を決める。ましろの紋だけ、どの家の形でもない。</p>
+      </div>
+      <p class="scene-count">09 / ROSTER</p>
+    </div>
     <ul class="chars">
 <li class="ch">
-  <img class="ch-face" src="assets/faces/ichigo.jpg" alt="明星いちご" width="360" height="360">
-  <div>
-    <p class="ch-family"><span class="dot" style="--c:#3FA66B"></span>明星家</p>
-    <h3 class="ch-name">明星いちご<span class="ch-kana">あけぼし いちご</span></h3>
-    <p class="ch-desc">万能の腕。何でもこなし、物量で押す。対策室を仕切る。</p>
-  </div>
+  <img class="ch-face" src="assets/faces/ichigo.jpg" alt="明星いちご" width="360" height="360" loading="lazy">
+  <h3 class="ch-name">明星いちご<span class="ch-kana">あけぼし いちご</span></h3>
+  <p class="ch-meta"><span class="dot" style="--c:#3FA66B"></span>明星家<span class="ch-sep">／</span>万能の腕</p>
+  <p class="ch-desc">何でもこなす。対策室を仕切る。</p>
 </li>
 <li class="ch">
-  <img class="ch-face" src="assets/faces/fumi.jpg" alt="仁科ふみ" width="360" height="360">
-  <div>
-    <p class="ch-family"><span class="dot" style="--c:#B5624A"></span>仁科家</p>
-    <h3 class="ch-name">仁科ふみ<span class="ch-kana">にしな ふみ</span></h3>
-    <p class="ch-desc">憲章の盾。暴走を抑え、呑まれた人を引き戻す。転校生として現れる。</p>
-  </div>
+  <img class="ch-face" src="assets/faces/fumi.jpg" alt="仁科ふみ" width="360" height="360" loading="lazy">
+  <h3 class="ch-name">仁科ふみ<span class="ch-kana">にしな ふみ</span></h3>
+  <p class="ch-meta"><span class="dot" style="--c:#B5624A"></span>仁科家<span class="ch-sep">／</span>憲章の盾</p>
+  <p class="ch-desc">暴走を抑え、呑まれた人を引き戻す。</p>
 </li>
 <li class="ch">
-  <img class="ch-face" src="assets/faces/asuka.jpg" alt="五十嵐あすか" width="360" height="360">
-  <div>
-    <p class="ch-family"><span class="dot" style="--c:#6B5BD2"></span>五十嵐家・宗家</p>
-    <h3 class="ch-name">五十嵐あすか<span class="ch-kana">いがらし あすか</span></h3>
-    <p class="ch-desc">千里眼。見る、聞く、戦場のすべてを把握する。病院の娘。最初にましろを見た。</p>
-  </div>
+  <img class="ch-face" src="assets/faces/asuka.jpg" alt="五十嵐あすか" width="360" height="360" loading="lazy">
+  <h3 class="ch-name">五十嵐あすか<span class="ch-kana">いがらし あすか</span></h3>
+  <p class="ch-meta"><span class="dot" style="--c:#6B5BD2"></span>五十嵐家・宗家<span class="ch-sep">／</span>千里眼</p>
+  <p class="ch-desc">すべてを見る。病院の娘。</p>
 </li>
 <li class="ch">
-  <img class="ch-face" src="assets/faces/honoka.jpg" alt="火野ほのか" width="360" height="360">
-  <div>
-    <p class="ch-family"><span class="dot" style="--c:#D9483B"></span>火野家</p>
-    <h3 class="ch-name">火野ほのか<span class="ch-kana">ひの ほのか</span></h3>
-    <p class="ch-desc">禁じ手。他家が封じた力を使える。速いが、自分も危うい。</p>
-  </div>
+  <img class="ch-face" src="assets/faces/honoka.jpg" alt="火野ほのか" width="360" height="360" loading="lazy">
+  <h3 class="ch-name">火野ほのか<span class="ch-kana">ひの ほのか</span></h3>
+  <p class="ch-meta"><span class="dot" style="--c:#D9483B"></span>火野家<span class="ch-sep">／</span>禁じ手</p>
+  <p class="ch-desc">封じられた力を使う。速く、危うい。</p>
 </li>
 <li class="ch is-hero">
-  <img class="ch-face" src="assets/faces/mashiro.jpg" alt="空野ましろ" width="360" height="360">
-  <div>
-    <p class="ch-family"><span class="dot" style="--c:#FFFFFF"></span>家系なし</p>
-    <h3 class="ch-name">空野ましろ<span class="ch-kana">そらの ましろ</span></h3>
-    <p class="ch-desc">普通の女の子だった。咲いた紋は、どの家の形でもない白い円。守りたいのは「今」。</p>
-  </div>
+  <img class="ch-face" src="assets/faces/mashiro.jpg" alt="空野ましろ" width="360" height="360" loading="lazy">
+  <h3 class="ch-name">空野ましろ<span class="ch-kana">そらの ましろ</span></h3>
+  <p class="ch-meta"><span class="dot" style="--c:#FFFFFF"></span>家系なし<span class="ch-sep">／</span>白い円</p>
+  <p class="ch-desc">普通の女の子だった。守りたいのは「今」。</p>
 </li>
 <li class="ch">
-  <img class="ch-face" src="assets/faces/rara.jpg" alt="越智らら" width="360" height="360">
-  <div>
-    <p class="ch-family"><span class="dot" style="--c:#3B7DD8"></span>越智家</p>
-    <h3 class="ch-name">越智らら<span class="ch-kana">おち らら</span></h3>
-    <p class="ch-desc">分身。自分の写しを無数に生む。装甲は無い。商店街のあちこちで働いている。</p>
-  </div>
+  <img class="ch-face" src="assets/faces/rara.jpg" alt="越智らら" width="360" height="360" loading="lazy">
+  <h3 class="ch-name">越智らら<span class="ch-kana">おち らら</span></h3>
+  <p class="ch-meta"><span class="dot" style="--c:#3B7DD8"></span>越智家<span class="ch-sep">／</span>分身</p>
+  <p class="ch-desc">写しを無数に生む。装甲は無い。</p>
 </li>
 <li class="ch">
-  <img class="ch-face" src="assets/faces/misuzu.jpg" alt="巴みすず" width="360" height="360">
-  <div>
-    <p class="ch-family"><span class="dot" style="--c:#E8923A"></span>巴家</p>
-    <h3 class="ch-name">巴みすず<span class="ch-kana">ともえ みすず</span></h3>
-    <p class="ch-desc">軽装の疾風。小さく速く、大きな相手に届く。小さな自転車で街を走る。</p>
-  </div>
+  <img class="ch-face" src="assets/faces/misuzu.jpg" alt="巴みすず" width="360" height="360" loading="lazy">
+  <h3 class="ch-name">巴みすず<span class="ch-kana">ともえ みすず</span></h3>
+  <p class="ch-meta"><span class="dot" style="--c:#E8923A"></span>巴家<span class="ch-sep">／</span>疾風</p>
+  <p class="ch-desc">小さく、速く、大きな相手に届く。</p>
 </li>
 <li class="ch">
-  <img class="ch-face" src="assets/faces/miyuki.jpg" alt="梁瀬みゆき" width="360" height="360">
-  <div>
-    <p class="ch-family"><span class="dot" style="--c:#2E4A8F"></span>梁瀬家</p>
-    <h3 class="ch-name">梁瀬みゆき<span class="ch-kana">やなせ みゆき</span></h3>
-    <p class="ch-desc">複数の心臓。必要な部分だけ動かし、少ない資源で戦い続ける。無口。</p>
-  </div>
+  <img class="ch-face" src="assets/faces/miyuki.jpg" alt="梁瀬みゆき" width="360" height="360" loading="lazy">
+  <h3 class="ch-name">梁瀬みゆき<span class="ch-kana">やなせ みゆき</span></h3>
+  <p class="ch-meta"><span class="dot" style="--c:#2E4A8F"></span>梁瀬家<span class="ch-sep">／</span>複数の心臓</p>
+  <p class="ch-desc">必要な分だけ動かす。無口。</p>
 </li>
 <li class="ch">
-  <img class="ch-face" src="assets/faces/kuu.jpg" alt="有馬くう" width="360" height="360">
-  <div>
-    <p class="ch-family"><span class="dot" style="--c:#8A56C2"></span>有馬家</p>
-    <h3 class="ch-name">有馬くう<span class="ch-kana">ありま くう</span></h3>
-    <p class="ch-desc">千の問い。問い詰めて本性を暴く。人差し指を立てて聞いてくる。</p>
-  </div>
+  <img class="ch-face" src="assets/faces/kuu.jpg" alt="有馬くう" width="360" height="360" loading="lazy">
+  <h3 class="ch-name">有馬くう<span class="ch-kana">ありま くう</span></h3>
+  <p class="ch-meta"><span class="dot" style="--c:#8A56C2"></span>有馬家<span class="ch-sep">／</span>千の問い</p>
+  <p class="ch-desc">問い詰めて、本性を暴く。</p>
 </li>
     </ul>
   </div>
