@@ -1,0 +1,128 @@
+[
+  {
+    "no": "01",
+    "start": 0,
+    "end": 3,
+    "title": "寮の朝",
+    "description": "窓辺のましろ。菜の花の見える、いつもの朝から始まる。",
+    "caption": "三月の終わり。",
+    "name": "01-morning.png"
+  },
+  {
+    "no": "02",
+    "start": 3,
+    "end": 5,
+    "title": "授業中のノート",
+    "description": "ノートに菜の花を描く手元。守りたい日常を短いカットで見せる。",
+    "caption": "いつもの、一日。",
+    "name": "02-notebook.png"
+  },
+  {
+    "no": "03",
+    "start": 5,
+    "end": 8,
+    "title": "封鎖に気づく",
+    "description": "帰り道でましろが立ち止まり、封鎖テープの向こうを見る。",
+    "caption": "帰り道が、",
+    "name": "03-notice.png"
+  },
+  {
+    "no": "04",
+    "start": 8,
+    "end": 10,
+    "title": "橋の異変",
+    "description": "橋の向こうに動かない人々。ましろの視線の先を見せる。",
+    "caption": "止まっていた。",
+    "name": "04-bridge.png"
+  },
+  {
+    "no": "05",
+    "start": 10,
+    "end": 12,
+    "title": "あすかが進む",
+    "description": "白衣の裾と足元。あすかが封鎖の先へ進む。",
+    "caption": "「下がって」",
+    "name": "05-step.png"
+  },
+  {
+    "no": "06",
+    "start": 12,
+    "end": 16,
+    "title": "千里眼",
+    "description": "あすかが目を閉じて力を使う。元の絵にある光だけを見せる。",
+    "caption": "開眼し、／現実を見渡せ",
+    "name": "06-asuka-power.png"
+  },
+  {
+    "no": "07",
+    "start": 16,
+    "end": 20,
+    "title": "ましろの発動",
+    "description": "ましろの手の甲に白い円が現れる。本人は戸惑い、消そうとする。",
+    "caption": "え、／なにこれ。／消えて。",
+    "name": "07-awakening.png"
+  },
+  {
+    "no": "08",
+    "start": 20,
+    "end": 23,
+    "title": "系譜のない力",
+    "description": "橋上のましろを俯瞰で見せる。後付けの円や粒子は重ねない。",
+    "caption": "誰の系譜でもない。",
+    "name": "08-overhead.png"
+  },
+  {
+    "no": "09",
+    "start": 23,
+    "end": 26,
+    "title": "あすかの反応",
+    "description": "細身に修正したあすかが目を開く。見たことのない発動に驚く。",
+    "caption": "「……なに、あれ」",
+    "name": "09-asuka-reaction.png"
+  },
+  {
+    "no": "10",
+    "start": 26,
+    "end": 28,
+    "title": "光が消え、力が抜ける",
+    "description": "ましろの手の光は消えている。安心した直後、膝から力が抜ける。",
+    "caption": "「あ、消えた」",
+    "name": "10-buckle.png"
+  },
+  {
+    "no": "11",
+    "start": 28,
+    "end": 30,
+    "title": "倒れる",
+    "description": "同じ欄干・川・遠景の橋を背に、ましろが横たわる。字幕を切って倒れた事実を見せる。",
+    "caption": "なし",
+    "name": "11-collapse.png"
+  },
+  {
+    "no": "12",
+    "start": 30,
+    "end": 31,
+    "title": "暗転",
+    "description": "意識が途切れ、時間と場所が変わる。",
+    "caption": "なし",
+    "name": "12-blackout.png"
+  },
+  {
+    "no": "13",
+    "start": 31,
+    "end": 36,
+    "title": "病院で目覚める",
+    "description": "ましろが病室で目を覚ます。そばにいるあすかが心配そうに声をかける。",
+    "caption": "目が覚めると、病院にいた。／「大丈夫？」",
+    "name": "13-hospital.png"
+  },
+  {
+    "no": "14",
+    "start": 36,
+    "end": 41,
+    "title": "タイトル",
+    "description": "NANOHANA AIの文字が順に現れ、第1話の題名で締める。",
+    "caption": "誰のものでもない、白い花。／NANOHANA AI／第1話「発動」",
+    "name": "14-title.png"
+  }
+]
