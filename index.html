@@ -383,6 +383,13 @@ img{max-width:100%;height:auto}
 </footer>
 <script>
 (function(){
+  // スマホ: 一覧画像はましろ（中央）が見える位置から始める
+  var h=document.querySelector('.hero'), hi=h&&h.querySelector('img');
+  function center(){ if(h.scrollWidth>h.clientWidth+4){ h.scrollLeft=(h.scrollWidth-h.clientWidth)/2 } }
+  if(hi){ if(hi.complete){center()} else {hi.addEventListener('load',center)} }
+  window.addEventListener('resize',center);
+})();
+(function(){
   var a=document.getElementById('audio'),b=document.getElementById('play'),b2=document.getElementById('play2'),f=document.getElementById('fill'),t=document.getElementById('time');
   function fmt(s){s=Math.floor(s||0);return Math.floor(s/60)+':'+('0'+s%60).slice(-2)}
   function tg(){ if(a.paused){a.play()}else{a.pause()} }
