@@ -29,7 +29,12 @@ body{margin:0;background:var(--ground);color:var(--ink);font-family:"Zen Kaku Go
 .mark::after{content:"";position:absolute;left:50%;top:50%;width:0;height:0;border-left:9px solid currentColor;border-top:6px solid transparent;border-bottom:6px solid transparent;transform:translate(-35%,-50%);transition:opacity .2s}
 .mark.is-playing::after{border:0;width:9px;height:11px;border-left:3px solid currentColor;border-right:3px solid currentColor;transform:translate(-50%,-50%)}
 .mark.is-playing{box-shadow:0 0 26px var(--glow),0 0 0 6px rgba(255,255,255,.08)}
-.player{display:flex;align-items:center;gap:14px;justify-content:center;margin:26px auto 0;max-width:460px;font-size:12px;color:var(--muted);letter-spacing:.12em}
+.player{display:flex;align-items:center;gap:14px;justify-content:center;margin:26px auto 0;max-width:520px;font-size:12px;color:var(--muted);letter-spacing:.12em}
+.p-btn{display:inline-flex;align-items:center;gap:8px;padding:8px 14px 8px 12px;border:1px solid var(--ink);border-radius:999px;background:transparent;color:var(--ink);cursor:pointer;font-size:11px;letter-spacing:.28em;font-weight:400;line-height:1}
+.p-btn:hover{background:var(--ink);color:var(--ground)}
+.p-ico{width:0;height:0;border-left:8px solid currentColor;border-top:5px solid transparent;border-bottom:5px solid transparent;margin-left:2px}
+.p-btn.is-playing .p-ico{width:8px;height:10px;border:0;border-left:2.5px solid currentColor;border-right:2.5px solid currentColor;margin-left:0}
+.p-btn-text{text-indent:.28em}
 .p-label{letter-spacing:.3em;font-size:10px}
 .p-title{color:var(--ink-2);font-family:"Shippori Mincho",serif;letter-spacing:.2em}
 .p-bar{flex:1;height:1px;background:var(--line);position:relative;overflow:visible}
@@ -109,6 +114,7 @@ footer .flower{display:inline-block;width:10px;height:10px;border-radius:50%;bac
   <h1 class="title lat">NANOHANA <b>AI</b></h1>
   <p class="story-name min"><small class="lat">2150</small>人と機械の区別は、もうない。</p>
   <div class="player" id="player">
+    <button class="p-btn lat" id="play2" type="button" aria-label="OP「白い菜の花」を再生"><span class="p-ico" aria-hidden="true"></span><span class="p-btn-text">PLAY</span></button>
     <span class="p-label lat">OP</span>
     <span class="p-title">白い菜の花</span>
     <span class="p-bar"><span class="p-fill" id="fill"></span></span>
@@ -241,11 +247,12 @@ footer .flower{display:inline-block;width:10px;height:10px;border-radius:50%;bac
 </footer>
 <script>
 (function(){
-  var a=document.getElementById('audio'),b=document.getElementById('play'),f=document.getElementById('fill'),t=document.getElementById('time');
+  var a=document.getElementById('audio'),b=document.getElementById('play'),b2=document.getElementById('play2'),f=document.getElementById('fill'),t=document.getElementById('time');
   function fmt(s){s=Math.floor(s||0);return Math.floor(s/60)+':'+('0'+s%60).slice(-2)}
-  b.addEventListener('click',function(){ if(a.paused){a.play()}else{a.pause()} });
-  a.addEventListener('play',function(){b.classList.add('is-playing');b.setAttribute('aria-label','一時停止')});
-  a.addEventListener('pause',function(){b.classList.remove('is-playing');b.setAttribute('aria-label','OP「白い菜の花」を再生')});
+  function tg(){ if(a.paused){a.play()}else{a.pause()} }
+  b.addEventListener('click',tg); b2.addEventListener('click',tg);
+  a.addEventListener('play',function(){b.classList.add('is-playing');b2.classList.add('is-playing');b2.querySelector('.p-btn-text').textContent='PAUSE';b.setAttribute('aria-label','一時停止')});
+  a.addEventListener('pause',function(){b.classList.remove('is-playing');b2.classList.remove('is-playing');b2.querySelector('.p-btn-text').textContent='PLAY';b.setAttribute('aria-label','OP「白い菜の花」を再生')});
   a.addEventListener('timeupdate',function(){ if(a.duration){f.style.width=(a.currentTime/a.duration*100)+'%'} t.textContent=fmt(a.currentTime) });
   a.addEventListener('loadedmetadata',function(){ t.textContent=fmt(a.duration) });
   document.querySelector('.p-bar').addEventListener('click',function(e){ var r=this.getBoundingClientRect(); if(a.duration){a.currentTime=(e.clientX-r.left)/r.width*a.duration} });
